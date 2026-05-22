@@ -16,8 +16,13 @@ const previewOptions = [
 const empathyItems = [
   "返信が来ない理由を考え続けてしまう",
   "短く送るつもりが、長文になってしまう",
-  "送る前から、少し後悔しそうな気がする",
   "送ったあと、急に不安になる",
+];
+
+const safetyItems = [
+  "相手への自動送信はしません",
+  "今すぐ返信を促す設計ではありません",
+  "落ち着いて判断するためのツールです",
 ];
 
 export default function Home() {
@@ -133,7 +138,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-slate-100 bg-slate-50/40 px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
+      <section className="px-5 pb-16 pt-10 sm:px-8 sm:pb-20 sm:pt-12 lg:px-10">
         <div className="mx-auto w-full max-w-3xl">
           <div className="max-w-2xl">
             <h2 className="text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-4xl">
@@ -155,13 +160,10 @@ export default function Home() {
             </div>
           </div>
 
-          <ul className="mt-9 space-y-3 text-sm leading-6 text-zinc-700 sm:text-base sm:leading-7">
+          <ul className="mt-9 max-w-2xl space-y-4 border-l border-slate-200 pl-4 text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
             {empathyItems.map((item) => (
-              <li
-                key={item}
-                className="flex gap-3 rounded-xl border border-slate-200 bg-white/80 px-4 py-3"
-              >
-                <span className="mt-2 size-1.5 shrink-0 rounded-full bg-slate-400" />
+              <li key={item} className="flex gap-3">
+                <span className="mt-3 size-1 shrink-0 rounded-full bg-slate-400" />
                 <span>{item}</span>
               </li>
             ))}
@@ -172,6 +174,39 @@ export default function Home() {
             <br />
             すぐ送る前のワンクッションを置けるようにします。
           </p>
+        </div>
+      </section>
+
+      <section className="px-5 pb-20 sm:px-8 sm:pb-24 lg:px-10">
+        <div className="mx-auto w-full max-w-3xl border-t border-slate-100 pt-12 sm:pt-14">
+          <div className="max-w-2xl">
+            <h2 className="text-balance text-2xl font-semibold leading-tight text-zinc-950 sm:text-3xl">
+              <span className="block">送信される前に、</span>
+              <span className="mt-1 block">一度整理します。</span>
+            </h2>
+
+            <div className="mt-6 space-y-5 text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
+              <p>
+                ReplyMateは、
+                <br />
+                入力された内容をそのまま相手へ送信することはありません。
+              </p>
+              <p>
+                まずは下書きとして整理し、
+                <br />
+                落ち着いて見直せる状態を作ります。
+              </p>
+            </div>
+          </div>
+
+          <ul className="mt-8 max-w-2xl space-y-3 text-sm leading-6 text-zinc-500 sm:text-base sm:leading-7">
+            {safetyItems.map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-2.5 size-1 shrink-0 rounded-full bg-slate-300" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </main>

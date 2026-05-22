@@ -44,6 +44,29 @@ const howItWorksItems = [
   },
 ];
 
+const miniExperienceItems = [
+  {
+    label: "入力前",
+    text: (
+      <>
+        なんで返信くれないの？
+        <br />
+        もうどうでもいいってこと？
+      </>
+    ),
+  },
+  {
+    label: "整理後",
+    text: (
+      <>
+        少し気になってたので、
+        <br />
+        また落ち着いたら話せたら嬉しいです。
+      </>
+    ),
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-dvh bg-white text-zinc-950">
@@ -70,7 +93,7 @@ export default function Home() {
               href="#beta"
               className="inline-flex h-12 w-full items-center justify-center rounded-full bg-slate-800 px-8 text-base font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 sm:w-auto"
             >
-              一度整理してみる
+              送る前に整理する
             </a>
             <p className="max-w-xs text-sm leading-6 text-zinc-500">
               ここで入力した内容が、そのまま相手へ送信されることはありません。
@@ -117,7 +140,7 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="text-sm leading-7 text-slate-700">
-                    今は、不安と焦りが少し強い状態です。まずは送らずに、言葉の強さだけ一緒に見直しましょう。
+                    返信が来ないと、いろいろ考えてしまいますよね。まずは送らずに、言葉の強さだけ一緒に見直してみましょう。
                   </p>
                 </div>
 
@@ -251,6 +274,37 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="px-5 pb-20 sm:px-8 sm:pb-24 lg:px-10">
+        <div className="mx-auto w-full max-w-3xl border-t border-slate-100 pt-12 sm:pt-14">
+          <div className="max-w-2xl">
+            <h2 className="text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-4xl">
+              <span className="block">少し整えるだけで、</span>
+              <span className="mt-1 block">言葉は軽くなる。</span>
+            </h2>
+          </div>
+
+          <div className="mt-9 max-w-2xl space-y-5">
+            {miniExperienceItems.map((item) => (
+              <div
+                key={item.label}
+                className="border-l border-slate-100 pl-4"
+              >
+                <p className="text-xs font-medium leading-5 text-zinc-400">
+                  {item.label}
+                </p>
+                <p className="mt-2 text-pretty text-base leading-8 text-zinc-700 sm:text-lg sm:leading-9">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-7 max-w-2xl text-sm leading-7 text-zinc-500">
+            下書きとして整理します。相手には自動送信されません。
+          </p>
         </div>
       </section>
     </main>

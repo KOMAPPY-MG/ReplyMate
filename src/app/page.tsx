@@ -28,8 +28,10 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-lg text-pretty text-base leading-8 text-zinc-600 sm:mt-8 sm:text-lg">
-            ReplyMateは、返信が来ない不安や焦りで追撃LINEを送りそうなとき、
-            感情と文章を整理するためのAIです。
+            <span className="block">
+              ReplyMateは、返信が来ない不安や焦りで追撃LINEを送りそうなとき、
+            </span>
+            <span className="block mt-2">感情と文章を整理するためのAIです。</span>
           </p>
 
           <div className="mt-7 flex w-full flex-col items-start gap-3 sm:mt-8 sm:w-auto">
@@ -37,7 +39,7 @@ export default function Home() {
               href="#beta"
               className="inline-flex h-12 w-full items-center justify-center rounded-full bg-slate-800 px-8 text-base font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 sm:w-auto"
             >
-              β版を試す
+              一度整理してみる
             </a>
             <p className="text-sm leading-6 text-zinc-500">
               登録無料。公開時に優先案内します。

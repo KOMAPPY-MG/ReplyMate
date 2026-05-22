@@ -37,7 +37,7 @@ export function BetaSignupForm() {
   if (isSubmitted) {
     return (
       <div
-        className="rounded-2xl border border-slate-100 bg-slate-50/60 p-5 sm:p-6"
+        className="rounded-3xl border border-emerald-100 bg-emerald-50/50 p-5 sm:p-6"
         role="status"
         aria-live="polite"
       >
@@ -67,7 +67,7 @@ export function BetaSignupForm() {
         <input
           id="beta-email"
           name="email"
-          className="mt-2 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/60 px-4 text-base text-zinc-950 outline-none transition-colors duration-150 placeholder:text-zinc-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-200"
+          className="mt-2 h-12 w-full rounded-2xl border border-slate-200 bg-slate-50/80 px-4 text-base text-zinc-950 outline-none transition-colors duration-150 placeholder:text-zinc-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-200"
           type="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
@@ -97,7 +97,7 @@ export function BetaSignupForm() {
         <div className="mt-3 space-y-2.5">
           {intentOptions.map((option) => (
             <label
-              className="flex cursor-pointer items-start gap-3 rounded-xl border border-transparent bg-slate-50/60 px-3 py-2.5 text-sm leading-6 text-zinc-700 transition-colors duration-150 has-[:checked]:border-slate-200 has-[:checked]:bg-white"
+              className="flex cursor-pointer items-start gap-3 rounded-2xl border border-transparent bg-slate-50/80 px-3 py-2.5 text-sm leading-6 text-zinc-700 transition-colors duration-150 has-[:checked]:border-slate-200 has-[:checked]:bg-white"
               key={option}
             >
               <input
@@ -125,7 +125,7 @@ export function BetaSignupForm() {
         <textarea
           id="beta-note"
           name="note"
-          className="mt-2 min-h-24 w-full resize-y rounded-xl border border-slate-200 bg-slate-50/60 px-4 py-3 text-base leading-7 text-zinc-950 outline-none transition-colors duration-150 placeholder:text-zinc-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-200"
+          className="mt-2 min-h-24 w-full resize-y rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-base leading-7 text-zinc-950 outline-none transition-colors duration-150 placeholder:text-zinc-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-200"
           value={note}
           onChange={(event) => setNote(event.target.value)}
           placeholder="例: 送る前に強すぎる言葉だけ教えてほしい"
@@ -140,10 +140,10 @@ export function BetaSignupForm() {
       </button>
 
       <p
-        className="mt-3 text-pretty text-xs leading-5 text-zinc-500"
+        className="mt-3 rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-2 text-pretty text-xs leading-5 text-zinc-500"
         id="beta-form-help"
       >
-        入力内容は受付の参考にします。β版公開時に案内します。
+        入力内容は受付の参考にします。相手に送信されることはありません。
       </p>
     </form>
   );

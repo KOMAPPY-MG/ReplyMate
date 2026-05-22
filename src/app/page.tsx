@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 pb-16 pt-10 sm:px-8 sm:pb-20 sm:pt-12 lg:px-10">
+      <section className="px-5 pb-16 pt-8 sm:px-8 sm:pb-20 sm:pt-10 lg:px-10">
         <div className="mx-auto w-full max-w-3xl">
           <div className="max-w-2xl">
             <h2 className="text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-4xl">
@@ -146,7 +146,7 @@ export default function Home() {
               <span className="mt-1 block">後悔したくないから。</span>
             </h2>
 
-            <div className="mt-7 space-y-5 text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
+            <div className="mt-6 space-y-4 text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
               <p>
                 返信が遅いだけかもしれない。
                 <br />
@@ -160,32 +160,28 @@ export default function Home() {
             </div>
           </div>
 
-          <ul className="mt-9 max-w-2xl space-y-4 border-l border-slate-200 pl-4 text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
+          <ul className="mt-7 max-w-2xl space-y-3.5 text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
             {empathyItems.map((item) => (
-              <li key={item} className="flex gap-3">
-                <span className="mt-3 size-1 shrink-0 rounded-full bg-slate-400" />
+              <li key={item} className="flex gap-3 odd:pl-0 even:pl-3">
+                <span className="mt-3 size-1 shrink-0 rounded-full bg-slate-300" />
                 <span>{item}</span>
               </li>
             ))}
           </ul>
 
-          <p className="mt-9 max-w-2xl text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
+          <p className="mt-7 max-w-2xl text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
             そんな瞬間に、
             <br />
             すぐ送る前のワンクッションを置けるようにします。
           </p>
-        </div>
-      </section>
 
-      <section className="px-5 pb-20 sm:px-8 sm:pb-24 lg:px-10">
-        <div className="mx-auto w-full max-w-3xl border-t border-slate-100 pt-12 sm:pt-14">
-          <div className="max-w-2xl">
-            <h2 className="text-balance text-2xl font-semibold leading-tight text-zinc-950 sm:text-3xl">
+          <div className="mt-12 max-w-2xl border-t border-slate-100 pt-8 sm:mt-14 sm:pt-9">
+            <h2 className="text-balance text-lg font-semibold leading-7 text-zinc-900 sm:text-xl sm:leading-8">
               <span className="block">送信される前に、</span>
               <span className="mt-1 block">一度整理します。</span>
             </h2>
 
-            <div className="mt-6 space-y-5 text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
+            <div className="mt-4 space-y-4 text-pretty text-sm leading-7 text-zinc-500 sm:text-base sm:leading-8">
               <p>
                 ReplyMateは、
                 <br />
@@ -197,16 +193,16 @@ export default function Home() {
                 落ち着いて見直せる状態を作ります。
               </p>
             </div>
-          </div>
 
-          <ul className="mt-8 max-w-2xl space-y-3 text-sm leading-6 text-zinc-500 sm:text-base sm:leading-7">
-            {safetyItems.map((item) => (
-              <li key={item} className="flex gap-3">
-                <span className="mt-2.5 size-1 shrink-0 rounded-full bg-slate-300" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+            <ul className="mt-5 space-y-2.5 text-sm leading-6 text-zinc-500">
+              {safetyItems.map((item) => (
+                <li key={item} className="flex gap-2.5">
+                  <span className="mt-2.5 size-1 shrink-0 rounded-full bg-slate-300" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
     </main>

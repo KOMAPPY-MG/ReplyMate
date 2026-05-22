@@ -22,9 +22,9 @@ const empathyItems = [
 ];
 
 const safetyItems = [
-  "相手への自動送信はしません",
-  "今すぐ返信を促す設計ではありません",
-  "落ち着いて判断するためのツールです",
+  "下書きとして見直せます",
+  "返信を急がせる設計ではありません",
+  "落ち着いて判断する時間を作ります",
 ];
 
 const howItWorksItems = [
@@ -221,20 +221,20 @@ export default function Home() {
 
           <div className="mt-14 max-w-2xl border-t border-slate-100/80 pt-7 sm:mt-16 sm:pt-8">
             <h2 className="text-balance text-lg font-semibold leading-7 text-zinc-900 sm:text-xl sm:leading-8">
-              <span className="block">送信される前に、</span>
-              <span className="mt-1 block">一度整理します。</span>
+              <span className="block">焦っているときほど、</span>
+              <span className="mt-1 block">下書きに戻れるように。</span>
             </h2>
 
             <div className="mt-4 space-y-4 text-pretty text-sm leading-7 text-zinc-500 sm:text-base sm:leading-8">
               <p>
                 ReplyMateは、
                 <br />
-                入力された内容をそのまま相手へ送信することはありません。
+                返信するかどうかを急かすためのものではありません。
               </p>
               <p>
-                まずは下書きとして整理し、
+                言葉を少し離して見られるように、
                 <br />
-                落ち着いて見直せる状態を作ります。
+                送る前の余白を作ります。
               </p>
             </div>
 
@@ -305,8 +305,17 @@ export default function Home() {
           </div>
 
           <p className="mt-7 max-w-2xl text-sm leading-7 text-zinc-500">
-            下書きとして整理します。相手には自動送信されません。
+            まずは下書きとして、言葉だけを見直せます。
           </p>
+
+          <div className="mt-6 flex w-full flex-col items-start sm:w-auto">
+            <a
+              href="#beta"
+              className="inline-flex h-12 w-full items-center justify-center rounded-full bg-slate-800 px-8 text-base font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 sm:w-auto"
+            >
+              送る前に整理する
+            </a>
+          </div>
         </div>
       </section>
 
@@ -339,7 +348,7 @@ export default function Home() {
                 送る前に整理する
               </a>
               <p className="max-w-sm text-pretty text-sm leading-6 text-zinc-500">
-                入力した内容が、そのまま相手へ送信されることはありません。
+                ここで整えた内容は、まず下書きとして扱われます。
               </p>
             </div>
           </div>

@@ -25,6 +25,25 @@ const safetyItems = [
   "落ち着いて判断するためのツールです",
 ];
 
+const howItWorksItems = [
+  {
+    step: "STEP 1",
+    title: "送ろうとしている文章を入れる",
+    description: "送信前のLINEやDMを、そのまま貼り付けます。",
+  },
+  {
+    step: "STEP 2",
+    title: "感情と文章を整理する",
+    description: "強くなりすぎている部分や、焦りを一緒に整理します。",
+  },
+  {
+    step: "STEP 3",
+    title: "落ち着いてから見直す",
+    description:
+      "そのまま送るのではなく、一度ワンクッション置ける状態を作ります。",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-dvh bg-white text-zinc-950">
@@ -202,6 +221,40 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 pb-20 sm:px-8 sm:pb-24 lg:px-10">
+        <div className="mx-auto w-full max-w-3xl border-t border-slate-100 pt-12 sm:pt-14">
+          <div className="max-w-2xl">
+            <h2 className="text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-4xl">
+              <span className="block">送る前に、</span>
+              <span className="mt-1 block">少しだけ間を置く。</span>
+            </h2>
+          </div>
+
+          <div className="mt-9 max-w-2xl">
+            {howItWorksItems.map((item, index) => (
+              <div
+                key={item.step}
+                className={
+                  index === 0
+                    ? "pb-7"
+                    : "border-t border-slate-100 py-7"
+                }
+              >
+                <p className="text-xs font-medium leading-5 text-zinc-400">
+                  {item.step}
+                </p>
+                <h3 className="mt-2 text-lg font-semibold leading-7 text-zinc-900 sm:text-xl sm:leading-8">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-pretty text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

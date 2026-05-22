@@ -13,6 +13,13 @@ const previewOptions = [
   },
 ];
 
+const empathyItems = [
+  "返信が来ない理由を考え続けてしまう",
+  "短く送るつもりが、長文になってしまう",
+  "送る前から、少し後悔しそうな気がする",
+  "送ったあと、急に不安になる",
+];
+
 export default function Home() {
   return (
     <main className="min-h-dvh bg-white text-zinc-950">
@@ -29,7 +36,7 @@ export default function Home() {
 
           <p className="mt-6 max-w-lg text-pretty text-base leading-8 text-zinc-600 sm:mt-8 sm:text-lg">
             <span className="block">
-              ReplyMateは、返信が来ない不安や焦りで追撃LINEを送りそうなとき、
+              ReplyMateは、返信が来ない不安や焦りで感情のまま送ってしまいそうなとき、
             </span>
             <span className="block mt-2">感情と文章を整理するためのAIです。</span>
           </p>
@@ -123,6 +130,48 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-slate-100 bg-slate-50/40 px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="max-w-2xl">
+            <h2 className="text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-4xl">
+              <span className="block">送ったあとに、</span>
+              <span className="mt-1 block">後悔したくないから。</span>
+            </h2>
+
+            <div className="mt-7 space-y-5 text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
+              <p>
+                返信が遅いだけかもしれない。
+                <br />
+                でも、何度も画面を見てしまう。
+              </p>
+              <p>
+                「もう一通だけ」と思ったあとで、
+                <br />
+                少し重かったかもと不安になる。
+              </p>
+            </div>
+          </div>
+
+          <ul className="mt-9 space-y-3 text-sm leading-6 text-zinc-700 sm:text-base sm:leading-7">
+            {empathyItems.map((item) => (
+              <li
+                key={item}
+                className="flex gap-3 rounded-xl border border-slate-200 bg-white/80 px-4 py-3"
+              >
+                <span className="mt-2 size-1.5 shrink-0 rounded-full bg-slate-400" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-9 max-w-2xl text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
+            そんな瞬間に、
+            <br />
+            すぐ送る前のワンクッションを置けるようにします。
+          </p>
         </div>
       </section>
     </main>

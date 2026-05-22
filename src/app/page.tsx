@@ -1,3 +1,5 @@
+import { BetaSignupForm } from "./BetaSignupForm";
+
 const previewOptions = [
   {
     text: "今日は送らず、明日もう一度考える",
@@ -340,6 +342,22 @@ export default function Home() {
                 入力した内容が、そのまま相手へ送信されることはありません。
               </p>
             </div>
+          </div>
+
+          <div className="mt-12 max-w-2xl sm:mt-14">
+            <div className="mb-5">
+              <p className="text-sm font-medium leading-6 text-slate-500">
+                β版受付
+              </p>
+              <h2 className="mt-2 text-balance text-2xl font-semibold leading-tight text-zinc-950 sm:text-3xl">
+                必要な人へ、静かに届けるために。
+              </h2>
+              <p className="mt-4 text-pretty text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
+                使いたい場面を教えてください。β版公開時に、案内をお送りします。
+              </p>
+            </div>
+
+            <BetaSignupForm />
           </div>
         </div>
       </section>

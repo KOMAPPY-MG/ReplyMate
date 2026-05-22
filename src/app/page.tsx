@@ -39,13 +39,13 @@ const safetyItems = [
 const howItWorksItems = [
   {
     phase: "01",
-    title: "入れる",
-    description: "送る前の文章を、そのまま置きます。",
+    title: "言葉を置く",
+    description: "送る前の言葉を、いったん置きます。",
   },
   {
     phase: "02",
     title: "整える",
-    description: "強く見える言葉や焦りを見直します。",
+    description: "強さや焦りを、少し離して見ます。",
   },
   {
     phase: "03",
@@ -72,8 +72,24 @@ const betaNotes = [
 
 export default function Home() {
   return (
-    <main className="min-h-dvh bg-white text-zinc-950">
-      <section className="mx-auto flex min-h-dvh w-full max-w-6xl flex-col justify-center px-5 py-14 sm:px-8 sm:py-20 lg:grid lg:grid-cols-[1fr_440px] lg:items-center lg:gap-16 lg:px-10 lg:py-24">
+    <main className="relative min-h-dvh bg-white text-zinc-950">
+      <header className="absolute inset-x-0 top-0 z-10 px-5 py-5 sm:px-8 lg:px-10">
+        <div className="mx-auto flex w-full max-w-6xl items-center">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/90 px-3 py-1.5 shadow-sm">
+            <span
+              className="flex size-5 items-center justify-center rounded-full border border-slate-300 bg-slate-50"
+              aria-hidden="true"
+            >
+              <span className="size-1.5 rounded-full bg-slate-500" />
+            </span>
+            <span className="text-sm font-semibold leading-5 text-zinc-900">
+              ReplyMate
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <section className="mx-auto flex min-h-dvh w-full max-w-6xl flex-col justify-center px-5 pb-14 pt-24 sm:px-8 sm:pb-20 sm:pt-28 lg:grid lg:grid-cols-[1fr_440px] lg:items-center lg:gap-16 lg:px-10 lg:pb-24 lg:pt-28">
         <div className="flex flex-col items-start">
           <p className="mb-5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-600">
             追撃LINE防止AI
@@ -383,15 +399,16 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <div className="mt-8 flex flex-col items-center gap-3 text-center">
               <a
                 href="#beta"
                 className="inline-flex h-12 w-full items-center justify-center rounded-full bg-slate-800 px-8 text-base font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 sm:w-auto"
               >
                 送る前に整理する
               </a>
-              <p className="text-sm leading-6 text-zinc-500">
-                まずは、言葉を置き直すところから。
+              <p className="text-sm leading-7 text-zinc-500">
+                <span className="block">まずは、</span>
+                <span className="block">言葉を置き直すところから。</span>
               </p>
             </div>
           </div>
@@ -429,7 +446,8 @@ export default function Home() {
           <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 lg:mt-0">
             <div className="mb-5">
               <h2 className="text-balance text-2xl font-semibold leading-tight text-zinc-950 sm:text-3xl">
-                必要な人へ、静かに届けるために。
+                <span className="block">必要な人へ、</span>
+                <span className="mt-1 block">静かに届けるために。</span>
               </h2>
               <p className="mt-4 text-pretty text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
                 使いたい場面を教えてください。β版公開時に、案内をお送りします。

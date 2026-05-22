@@ -39,26 +39,35 @@ const safetyItems = [
 const howItWorksItems = [
   {
     phase: "01",
-    title: "送ろうとしている文章を入れる",
-    description: "送信前のLINEやDMを、そのまま貼り付けます。",
+    title: "入れる",
+    description: "送る前の文章を、そのまま置きます。",
   },
   {
     phase: "02",
-    title: "感情と文章を整理する",
-    description: "強くなりすぎている部分や、焦りを一緒に整理します。",
+    title: "整える",
+    description: "強く見える言葉や焦りを見直します。",
   },
   {
     phase: "03",
-    title: "落ち着いてから見直す",
-    description:
-      "そのまま送るのではなく、一度ワンクッション置ける状態を作ります。",
+    title: "見直す",
+    description: "少し間を置いて、下書きとして眺めます。",
   },
 ];
 
-const reassuranceItems = [
-  "入力内容はそのまま相手に送信されません",
-  "まずは下書きとして整理します",
+const heroChips = [
+  "送信前のワンクッション",
+  "落ち着いて見直す",
+];
+
+const miniExperienceChips = [
+  "未送信",
+  "下書き",
+  "自動送信なし",
+];
+
+const betaNotes = [
   "β版公開時に案内します",
+  "受付の参考として扱います",
 ];
 
 export default function Home() {
@@ -88,7 +97,7 @@ export default function Home() {
               送る前に整理する
             </a>
             <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-500">
-              {reassuranceItems.slice(0, 2).map((item) => (
+              {heroChips.map((item) => (
                 <span
                   className="rounded-full border border-slate-200 bg-white px-3 py-1"
                   key={item}
@@ -173,7 +182,7 @@ export default function Home() {
                 </div>
 
                 <p className="rounded-2xl border border-slate-200 bg-white px-3 py-2 text-xs leading-5 text-slate-500">
-                  送信はまだされません。まず下書きとして整理します。
+                  いまは送る前。落ち着いて見直せます。
                 </p>
               </div>
             </div>
@@ -181,7 +190,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-18 sm:px-8 sm:py-24 lg:px-10">
+      <section className="px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
         <div className="mx-auto w-full max-w-5xl">
           <div className="max-w-2xl">
             <p className="text-sm font-medium leading-6 text-slate-500">
@@ -270,13 +279,13 @@ export default function Home() {
           <div className="mt-9 grid gap-4 md:grid-cols-3">
             {howItWorksItems.map((item) => (
               <article
-                className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"
+                className="rounded-3xl border border-slate-200 bg-white p-5"
                 key={item.phase}
               >
                 <p className="text-xs font-semibold leading-5 text-slate-400">
                   {item.phase}
                 </p>
-                <h3 className="mt-4 text-base font-semibold leading-7 text-zinc-900 sm:text-lg sm:leading-8">
+                <h3 className="mt-4 text-xl font-semibold leading-7 text-zinc-900">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-pretty text-sm leading-7 text-zinc-600">
@@ -288,79 +297,103 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-neutral-50 px-5 py-18 sm:px-8 sm:py-24 lg:px-10">
-        <div className="mx-auto grid w-full max-w-5xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-          <div>
+      <section className="bg-neutral-50 px-5 py-18 sm:px-8 sm:py-28 lg:px-10">
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-medium leading-6 text-slate-500">
               ミニ体験
             </p>
-            <h2 className="mt-3 text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-4xl">
+            <h2 className="mt-3 text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-5xl sm:leading-tight">
               <span className="block">少し整えるだけで、</span>
               <span className="mt-1 block">言葉は軽くなる。</span>
             </h2>
             <p className="mt-6 text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
-              ReplyMateの価値は、正解を出すことではありません。送る前に、
-              いまの言葉を一度下書きとして置き直せることです。
+              正解の返信を作るのではなく、いまの言葉を少し離して見る。
+              その一瞬を、プロダクト体験の中心に置いています。
             </p>
-            <div className="mt-7 flex w-full flex-col items-start gap-3 sm:w-auto">
+          </div>
+
+          <div className="mt-12 rounded-[2.25rem] border border-slate-200 bg-white p-4 shadow-sm sm:p-6 lg:p-8">
+            <div className="mb-7 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="text-sm font-semibold leading-6 text-zinc-900">
+                  送る前の下書き整理
+                </p>
+                <p className="mt-1 text-sm leading-6 text-zinc-500">
+                  感情を否定せず、言葉の温度だけを少し下げます。
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-500">
+                {miniExperienceChips.map((item) => (
+                  <span
+                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1"
+                    key={item}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4 lg:grid-cols-[1fr_4rem_1fr] lg:items-stretch">
+              <div className="rounded-3xl border border-stone-200 bg-stone-50 p-5 sm:p-6">
+                <div className="mb-5 flex items-center justify-between gap-3">
+                  <p className="text-xs font-semibold leading-5 text-zinc-500">
+                    Before
+                  </p>
+                  <span className="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-zinc-500">
+                    入力前
+                  </span>
+                </div>
+                <p className="text-pretty text-xl font-semibold leading-9 text-zinc-950 sm:text-2xl sm:leading-10">
+                  なんで返信くれないの？
+                  <br />
+                  もうどうでもいいってこと？
+                </p>
+                <p className="mt-5 text-sm leading-7 text-zinc-500">
+                  不安がそのまま言葉の強さになっている状態。
+                </p>
+              </div>
+
+              <div
+                className="flex items-center justify-center text-sm font-medium text-slate-400"
+                aria-hidden="true"
+              >
+                <span className="hidden lg:block">整理</span>
+                <div className="h-8 w-px bg-slate-200 lg:hidden" />
+              </div>
+
+              <div className="rounded-3xl border border-emerald-100 bg-emerald-50/60 p-5 shadow-sm sm:p-6">
+                <div className="mb-5 flex items-center justify-between gap-3">
+                  <p className="text-xs font-semibold leading-5 text-emerald-700">
+                    After
+                  </p>
+                  <span className="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-emerald-700">
+                    整理後
+                  </span>
+                </div>
+                <p className="text-pretty text-xl font-semibold leading-9 text-zinc-950 sm:text-2xl sm:leading-10">
+                  少し気になってたので、
+                  <br />
+                  また落ち着いたら話せたら嬉しいです。
+                </p>
+                <p className="mt-5 text-sm leading-7 text-zinc-600">
+                  気持ちは残したまま、相手を責めない下書きに。
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
                 href="#beta"
                 className="inline-flex h-12 w-full items-center justify-center rounded-full bg-slate-800 px-8 text-base font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 sm:w-auto"
               >
                 送る前に整理する
               </a>
+              <p className="text-sm leading-6 text-zinc-500">
+                まずは、言葉を置き直すところから。
+              </p>
             </div>
-          </div>
-
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-            <div className="mb-5 flex flex-wrap gap-2 text-xs font-medium text-slate-500">
-              <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1">
-                未送信
-              </span>
-              <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1">
-                下書き
-              </span>
-              <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1">
-                自動送信なし
-              </span>
-            </div>
-
-            <div className="grid gap-4">
-              <div className="rounded-3xl border border-red-100 bg-red-50/40 p-5">
-                <p className="text-xs font-medium leading-5 text-zinc-500">
-                  入力前
-                </p>
-                <p className="mt-3 text-pretty text-lg font-medium leading-8 text-zinc-900">
-                  なんで返信くれないの？
-                  <br />
-                  もうどうでもいいってこと？
-                </p>
-              </div>
-
-              <div className="flex justify-center" aria-hidden="true">
-                <div className="h-8 w-px bg-slate-200" />
-              </div>
-
-              <div className="rounded-3xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm">
-                <div className="flex items-center justify-between gap-3">
-                  <p className="text-xs font-medium leading-5 text-zinc-500">
-                    整理後
-                  </p>
-                  <span className="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-emerald-700">
-                    下書きに保存
-                  </span>
-                </div>
-                <p className="mt-3 text-pretty text-lg font-medium leading-8 text-zinc-900">
-                  少し気になってたので、
-                  <br />
-                  また落ち着いたら話せたら嬉しいです。
-                </p>
-              </div>
-            </div>
-
-            <p className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-7 text-zinc-600">
-              まずは下書きとして、言葉だけを見直せます。
-            </p>
           </div>
         </div>
       </section>
@@ -369,7 +402,7 @@ export default function Home() {
         className="bg-white px-5 py-18 sm:px-8 sm:py-24 lg:px-10"
         id="beta"
       >
-        <div className="mx-auto w-full max-w-5xl rounded-[2rem] border border-slate-200 bg-stone-50 p-5 shadow-sm sm:p-8 lg:grid lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
+        <div className="mx-auto w-full max-w-5xl rounded-[2rem] border border-stone-200 bg-stone-50 p-5 sm:p-8 lg:grid lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <div>
             <p className="text-sm font-medium leading-6 text-slate-500">
               β版受付
@@ -384,7 +417,7 @@ export default function Home() {
             </p>
 
             <div className="mt-7 grid gap-2 text-sm leading-6 text-zinc-600">
-              {reassuranceItems.map((item) => (
+              {betaNotes.map((item) => (
                 <div className="flex items-start gap-2.5" key={item}>
                   <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-slate-400" />
                   <span>{item}</span>
@@ -393,7 +426,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6 lg:mt-0">
+          <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 lg:mt-0">
             <div className="mb-5">
               <h2 className="text-balance text-2xl font-semibold leading-tight text-zinc-950 sm:text-3xl">
                 必要な人へ、静かに届けるために。

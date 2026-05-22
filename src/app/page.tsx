@@ -16,24 +16,23 @@ const previewOptions = [
 export default function Home() {
   return (
     <main className="min-h-dvh bg-white text-zinc-950">
-      <section className="mx-auto flex min-h-dvh w-full max-w-6xl flex-col justify-center px-6 py-16 sm:px-8 sm:py-20 lg:grid lg:grid-cols-[1fr_420px] lg:items-center lg:gap-16 lg:px-10 lg:py-24">
+      <section className="mx-auto flex min-h-dvh w-full max-w-6xl flex-col justify-center px-5 py-14 sm:px-8 sm:py-20 lg:grid lg:grid-cols-[1fr_420px] lg:items-center lg:gap-16 lg:px-10 lg:py-24">
         <div className="flex flex-col items-start">
           <p className="mb-5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-600">
             追撃LINE防止AI
           </p>
 
-          <h1 className="max-w-2xl text-balance text-[2.45rem] font-semibold leading-[1.12] text-zinc-950 sm:text-[3.25rem] lg:text-[3.8rem]">
-            そのLINEを送る前に、
-            <br />
-            一度だけ整える。
+          <h1 className="max-w-2xl text-[clamp(1.6rem,8vw,3.8rem)] font-semibold leading-[1.06] text-zinc-950 sm:text-[3.2rem] lg:text-[3.8rem]">
+            <span className="block whitespace-nowrap">そのLINEを送る前に、</span>
+            <span className="mt-1 block whitespace-nowrap">一度だけ整える。</span>
           </h1>
 
-          <p className="mt-7 max-w-lg text-pretty text-base leading-8 text-zinc-600 sm:mt-8 sm:text-lg">
+          <p className="mt-6 max-w-lg text-pretty text-base leading-8 text-zinc-600 sm:mt-8 sm:text-lg">
             ReplyMateは、返信が来ない不安や焦りで追撃LINEを送りそうなとき、
             感情と文章を整理するためのAIです。
           </p>
 
-          <div className="mt-8 flex w-full flex-col items-start gap-3 sm:w-auto">
+          <div className="mt-7 flex w-full flex-col items-start gap-3 sm:mt-8 sm:w-auto">
             <a
               href="#beta"
               className="inline-flex h-12 w-full items-center justify-center rounded-full bg-slate-800 px-8 text-base font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 sm:w-auto"
@@ -46,7 +45,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-12 lg:mt-0">
+        <div className="mt-10 sm:mt-12 lg:mt-0">
           <div className="mx-auto w-full max-w-sm rounded-[2.25rem] border border-slate-200 bg-slate-100/70 p-2 shadow-sm">
             <div className="rounded-[1.75rem] border border-slate-200 bg-white p-4">
               <div className="mx-auto mb-4 h-1.5 w-14 rounded-full bg-zinc-200" />

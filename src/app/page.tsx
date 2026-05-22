@@ -202,9 +202,9 @@ export default function Home() {
             </div>
           </div>
 
-          <ul className="mt-7 max-w-2xl space-y-3.5 text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
+          <ul className="mt-7 max-w-2xl space-y-4 text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
             {empathyItems.map((item) => (
-              <li key={item} className="flex gap-3 odd:pl-0 even:pl-3">
+              <li key={item} className="flex gap-3">
                 <span className="mt-3 size-1 shrink-0 rounded-full bg-slate-300" />
                 <span>{item}</span>
               </li>
@@ -249,22 +249,22 @@ export default function Home() {
       </section>
 
       <section className="px-5 pb-20 pt-2 sm:px-8 sm:pb-24 sm:pt-4 lg:px-10">
-        <div className="mx-auto w-full max-w-3xl border-t border-slate-100 pt-14 sm:pt-16">
+        <div className="mx-auto w-full max-w-3xl border-t border-slate-100 pt-12 sm:pt-14">
           <div className="max-w-2xl">
-            <h2 className="text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-4xl">
+            <h2 className="text-balance text-2xl font-semibold leading-tight text-zinc-950 sm:text-3xl">
               <span className="block">送る前に、</span>
               <span className="mt-1 block">少しだけ間を置く。</span>
             </h2>
           </div>
 
-          <div className="mt-9 max-w-2xl space-y-8 sm:mt-10">
+          <div className="mt-8 max-w-2xl space-y-7 sm:mt-9">
             {howItWorksItems.map((item) => (
               <div key={item.phase} className="grid grid-cols-[4.5rem_1fr] gap-4">
                 <p className="pt-1 text-xs font-medium leading-5 text-zinc-400">
                   {item.phase}
                 </p>
                 <div>
-                  <h3 className="text-lg font-semibold leading-7 text-zinc-900 sm:text-xl sm:leading-8">
+                  <h3 className="text-base font-semibold leading-7 text-zinc-900 sm:text-lg sm:leading-8">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-pretty text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
@@ -278,15 +278,15 @@ export default function Home() {
       </section>
 
       <section className="px-5 pb-20 sm:px-8 sm:pb-24 lg:px-10">
-        <div className="mx-auto w-full max-w-3xl border-t border-slate-100 pt-12 sm:pt-14">
+        <div className="mx-auto w-full max-w-3xl border-t border-slate-100 pt-11 sm:pt-12">
           <div className="max-w-2xl">
-            <h2 className="text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-4xl">
+            <h2 className="text-balance text-2xl font-semibold leading-tight text-zinc-950 sm:text-3xl">
               <span className="block">少し整えるだけで、</span>
               <span className="mt-1 block">言葉は軽くなる。</span>
             </h2>
           </div>
 
-          <div className="mt-9 max-w-2xl space-y-5">
+          <div className="mt-8 max-w-2xl space-y-5">
             {miniExperienceItems.map((item) => (
               <div
                 key={item.label}
@@ -305,6 +305,42 @@ export default function Home() {
           <p className="mt-7 max-w-2xl text-sm leading-7 text-zinc-500">
             下書きとして整理します。相手には自動送信されません。
           </p>
+        </div>
+      </section>
+
+      <section id="beta" className="px-5 pb-16 pt-4 sm:px-8 sm:pb-20 sm:pt-6 lg:px-10">
+        <div className="mx-auto w-full max-w-3xl border-t border-slate-100 pt-14 sm:pt-16">
+          <div className="max-w-2xl">
+            <h2 className="text-balance text-3xl font-semibold leading-tight text-zinc-950 sm:text-4xl">
+              <span className="block">送る前に、</span>
+              <span className="mt-1 block">一度だけ整える。</span>
+            </h2>
+
+            <div className="mt-6 space-y-4 text-pretty text-base leading-8 text-zinc-600 sm:text-lg sm:leading-9">
+              <p>
+                返信が来ない不安や、
+                <br />
+                感情のまま送ってしまいそうな瞬間に。
+              </p>
+              <p>
+                まずは下書きとして、
+                <br />
+                言葉と気持ちを整理してみてください。
+              </p>
+            </div>
+
+            <div className="mt-8 flex w-full flex-col items-start gap-3 sm:w-auto">
+              <a
+                href="#beta"
+                className="inline-flex h-12 w-full items-center justify-center rounded-full bg-slate-800 px-8 text-base font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 sm:w-auto"
+              >
+                送る前に整理する
+              </a>
+              <p className="max-w-sm text-pretty text-sm leading-6 text-zinc-500">
+                入力した内容が、そのまま相手へ送信されることはありません。
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

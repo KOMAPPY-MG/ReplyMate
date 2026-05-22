@@ -54,11 +54,6 @@ const howItWorksItems = [
   },
 ];
 
-const heroChips = [
-  "送信前のワンクッション",
-  "落ち着いて見直す",
-];
-
 const miniExperienceChips = [
   "未送信",
   "下書き",
@@ -73,7 +68,7 @@ const betaNotes = [
 export default function Home() {
   return (
     <main className="relative min-h-dvh bg-white text-zinc-950">
-      <header className="absolute inset-x-0 top-0 z-10 px-5 py-5 sm:px-8 lg:px-10">
+      <header className="absolute inset-x-0 top-0 z-10 px-5 py-4 sm:px-8 sm:py-5 lg:px-10">
         <div className="mx-auto flex w-full max-w-6xl items-center">
           <div className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/90 px-3 py-1.5 shadow-sm">
             <span
@@ -89,7 +84,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="mx-auto flex min-h-dvh w-full max-w-6xl flex-col justify-center px-5 pb-14 pt-24 sm:px-8 sm:pb-20 sm:pt-28 lg:grid lg:grid-cols-[1fr_440px] lg:items-center lg:gap-16 lg:px-10 lg:pb-24 lg:pt-28">
+      <section className="mx-auto flex min-h-dvh w-full max-w-6xl flex-col justify-start px-5 pb-14 pt-20 sm:px-8 sm:pb-20 sm:pt-28 lg:grid lg:grid-cols-[1fr_440px] lg:items-center lg:gap-16 lg:px-10 lg:pb-24 lg:pt-28 xl:justify-center">
         <div className="flex flex-col items-start">
           <p className="mb-5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-600">
             追撃LINE防止AI
@@ -112,16 +107,9 @@ export default function Home() {
             >
               送る前に整理する
             </a>
-            <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-500">
-              {heroChips.map((item) => (
-                <span
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1"
-                  key={item}
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+            <p className="text-xs leading-5 text-slate-500 sm:text-sm">
+              入力内容は相手に送信されません。
+            </p>
           </div>
         </div>
 
@@ -445,9 +433,11 @@ export default function Home() {
 
           <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 lg:mt-0">
             <div className="mb-5">
-              <h2 className="text-balance text-2xl font-semibold leading-tight text-zinc-950 sm:text-3xl">
+              <h2 className="text-balance text-[1.35rem] font-semibold leading-tight text-zinc-950 sm:text-3xl">
                 <span className="block">必要な人へ、</span>
-                <span className="mt-1 block">静かに届けるために。</span>
+                <span className="mt-1 block whitespace-nowrap">
+                  静かに届けるために。
+                </span>
               </h2>
               <p className="mt-4 text-pretty text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
                 使いたい場面を教えてください。β版公開時に、案内をお送りします。
